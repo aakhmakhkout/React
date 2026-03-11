@@ -1,0 +1,42 @@
+.cards {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #222;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.cards > img {
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.cards > p {
+    text-align: justify;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.cards h1 {
+    color: rgb(255, 187, 0);
+    font-family: cursive;
+}
+
+.cards button {
+    background: none;
+    border: none;
+    background-color: purple;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+

@@ -1,0 +1,31 @@
+* {
+    list-style: none;
+    color: white;    
+}
+
+.navBar {
+    width: 100%;
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    background-color: purple;
+    border-radius: 10px;
+   
+}
+
+.logo{
+    width: 10rem;
+    padding-left: 10px;
+}
+.links {
+    min-width: 30rem;
+    padding-right: 10px;
+}
+.navLinks > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLinks > ul > li > a{
+    text-decoration: none;
+}

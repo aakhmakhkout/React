@@ -1,0 +1,23 @@
+.mainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sections {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.section1, .section2 {
+    width: 45%;
+    background-color: purple;
+    border-radius: 10px;
+}
+p {
+    padding: 10px 20px;
+}

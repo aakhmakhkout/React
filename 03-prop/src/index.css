@@ -1,0 +1,11 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
