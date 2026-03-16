@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(34, 34, 34);
+}
+
+.static {
+    width: 50%;
+    height:300px;
+    background-color: rgb(178, 206, 53);
+}
+
+.element1 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(107, 121, 56);
+    text-align: center;
+    position: static;
+}
+
+.text {
+    color: white;
+    padding: 30px;
+    text-align: justify;
+}
+
+.relative {
+    width: 50%;
+    background-color: rgb(42, 173, 162);
+    height: 300px;
+}
+
+.relativeelem {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(55, 91, 92);
+    text-align: center;
+    position: relative;
+    top: 100px;
+    left: 150px;
+}
+
+.absolute {
+    width: 70%;
+    height: 400px;
+    background-color: rgb(39, 134, 68);
+    position: relative;
+}
+.absoluteelem {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(79, 131, 86);
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 500px;
+}
+
+.fixed {
+    width: 50%;
+    height: 300px;
+    background-color: rgb(223, 171, 29);
+}
+.fixedelem {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(199, 173, 24);
+    text-align: center;
+    position: fixed;
+    top: 200px;
+    left: 100px;
+}
+.sticky {
+    width: 50%;
+    background-color: rgb(139, 37, 223);
+    height: 600px;
+    
+}
+.stickyelem {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(128, 27, 128);
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
