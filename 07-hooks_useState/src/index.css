@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+#inputmirrorpara::-webkit-scrollbar {
+ display: none;
+}

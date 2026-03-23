@@ -26,145 +26,151 @@
 
 //? useReducer : useReducer is used to manage state when it becomes complex
 
-import React, { useState } from 'react'
-import List from "./components/createlist.jsx"
+// import React, { useState } from 'react'
+// import List from "./components/createlist.jsx"
 
-const App = () => {
+// const App = () => {
     // let count = 0;
     // function counter() {
     //     count++;
     //     console.log(count);
     //     return count;
     // }
-    const [incrcount, setCount] = useState(0); // count - value, setCount - function to update, 0 - starting value;
+    
 
-    function increment() {
-        setCount(incrcount+1); // count++ is invalid cause this is constant
-    }
+//     const [currState, setstate] = useState("ON");
+//     function toggleState() {
+//         if(currState === "ON") {
+//             setstate("OFF");
+//         }
+//         else {
+//             setstate("ON");
+//         }
+//     }
 
-    const [decrcount, setCountdec] = useState(50);
-    function decrement() {
-        setCountdec(decrcount-1);
-    }
+//     const [text, settext] = useState("");
 
-    function reset() {
-        setCount(0);
-        setCountdec(0);
-        setdblcount(0);
-    }
+//     function mirrorText(value) {
+//         settext(value);
+//     }
 
-    const [currState, setstate] = useState("ON");
-    function toggleState() {
-        if(currState === "ON") {
-            setstate("OFF");
-        }
-        else {
-            setstate("ON");
-        }
-    }
+//     const [dblcount, setdblcount] = useState(1)
+//     function doubleCounter() {
+//         setdblcount(function(prev) {
+//             if(dblcount === 0) {
+//                 prev = 1;
+//             }
+//             return prev+prev;
+//         });
+//     }
 
-    const [text, settext] = useState("");
+//   
 
-    function mirrorText(value) {
-        settext(value);
-    }
+//  
 
-    const [dblcount, setdblcount] = useState(1)
-    function doubleCounter() {
-        setdblcount(function(prev) {
-            if(dblcount === 0) {
-                prev = 1;
-            }
-            return prev+prev;
-        });
-    }
+//   return (
+//     <div>
+//         {/* //? increment */}
+//         <div>
+//         <h1>Increment</h1>
+//         <button onClick={()=> {
+//             increment()
+//         }}><h1>Counter is {incrcount}</h1></button>
+//         </div>
 
-    const [user, setuser] = useState({name: "kaneki", age:20});
+//         {/* //? decrement */}
+//         <div>
+//         <h1>Decrement</h1>
+//         <button onClick={()=> {
+//             decrement();
+//         }}><h1>Counter is {decrcount}</h1></button>
+//         </div>
 
-    function changeUserDetails() {
+//         {/* //? reset */}
+//         <div>
+//         <h1>reset btn</h1>
+//         <button onClick={()=> {
+//             reset();
+//         }}><h1>Reset values</h1></button>
+//         </div>
 
-        setuser({name:"touka", age:user.age});
-    }
+//         {/* //? toggle on off */}
+//         <div>
+//         <h1>ON OFF</h1>
+//         <button onClick={()=> {
+//             toggleState();
+//         }}><h1>{currState}</h1></button>
+//         </div>
 
-    const [fruits, setfruits] = useState(["apple", "banana"]);
+//         {/* //? input mirroring */}
+//         <div>
+//         <h1>Input Mirror</h1>
+//         <input type="text" onChange={(elem)=> {
+//             mirrorText(elem.target.value)
+//         }} name="input-field"/>
+//         <p>{text}</p>
+//         </div>
 
-    function additem() {
-        setfruits(function(list) {
-            return [...list, "mango"];
-        })
-    }
+//         {/* //? double counter */}
 
+//         <div>
+//         <h1>Double Counter</h1>
+        
+//         <button onClick={()=> {
+//             doubleCounter();
+//         }}><h1>{dblcount}</h1></button>
+//         </div>
+
+//         {/* //? usestate with objects # arrays and objects in react must not be mutated*/}
+//         <div>
+//         <h1>change user details</h1>
+//         <p>username is {user.name}</p>
+//         <p>Age is {user.age}</p>
+//         <button onClick={changeUserDetails}>Change Details</button>
+        
+//         </div>
+
+//         {/* usestate with arrays */}
+//         <div>
+//         <h1>Add Fruits in list</h1>
+//         <p>{fruits}</p>
+//         <button onClick={additem}>Add mango</button>
+        
+//         </div>
+
+//         <List />
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React from 'react'
+import Counter from "./components/counter.jsx"
+import DblCounter from "./components/doublecounter.jsx"
+import Toggle from "./components/toggle.jsx"
+import ChangeDetails from "./components/changeDetails.jsx"
+import AddItems from "./components/additems.jsx"
+import Inputmirror from "./components/inputmirror.jsx"
+import Creatlist from "./components/createlist.jsx"
+
+
+const App = () => {
   return (
-    <div>
-        {/* //? increment */}
-        <div>
-        <h1>Increment</h1>
-        <button onClick={()=> {
-            increment()
-        }}><h1>Counter is {incrcount}</h1></button>
-        </div>
-
-        {/* //? decrement */}
-        <div>
-        <h1>Decrement</h1>
-        <button onClick={()=> {
-            decrement();
-        }}><h1>Counter is {decrcount}</h1></button>
-        </div>
-
-        {/* //? reset */}
-        <div>
-        <h1>reset btn</h1>
-        <button onClick={()=> {
-            reset();
-        }}><h1>Reset values</h1></button>
-        </div>
-
-        {/* //? toggle on off */}
-        <div>
-        <h1>ON OFF</h1>
-        <button onClick={()=> {
-            toggleState();
-        }}><h1>{currState}</h1></button>
-        </div>
-
-        {/* //? input mirroring */}
-        <div>
-        <h1>Input Mirror</h1>
-        <input type="text" onChange={(elem)=> {
-            mirrorText(elem.target.value)
-        }} name="input-field"/>
-        <p>{text}</p>
-        </div>
-
-        {/* //? double counter */}
-
-        <div>
-        <h1>Double Counter</h1>
-        
-        <button onClick={()=> {
-            doubleCounter();
-        }}><h1>{dblcount}</h1></button>
-        </div>
-
-        {/* //? usestate with objects # arrays and objects in react must not be mutated*/}
-        <div>
-        <h1>change user details</h1>
-        <p>username is {user.name}</p>
-        <p>Age is {user.age}</p>
-        <button onClick={changeUserDetails}>Change Details</button>
-        
-        </div>
-
-        {/* usestate with arrays */}
-        <div>
-        <h1>Add Fruits in list</h1>
-        <p>{fruits}</p>
-        <button onClick={additem}>Add mango</button>
-        
-        </div>
-
-        <List />
+    <div className='bg-cyan-800 w-full h-full flex flex-col gap-10'>
+        <Counter />
+        <hr/>
+        <DblCounter />
+        <hr />
+        <Toggle />
+        <hr />
+        <ChangeDetails />
+        <hr />
+        <AddItems />
+        <hr />
+        <Inputmirror />
+        <hr />
+        <Creatlist />
     </div>
   )
 }
