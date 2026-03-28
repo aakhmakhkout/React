@@ -1,0 +1,42 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  height: 100vh;
+  border-radius: 20px;
+}
+
+.formContainer {
+  min-height: 300px;
+  padding: 10px 20px;
+  background-color: cyan;
+  max-width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form > input {
+  background-color: rgb(255, 0, 0);
+  opacity: 0.7;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+form > button {
+  background-color: gray;
+  border: none;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+
+p {
+  word-break: break-all;
+}
