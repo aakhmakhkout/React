@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+.text-color{
+  background: linear-gradient(to bottom, yellow, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+
+  display: inline-block;
+}
+
+.notes-scroll::-webkit-scrollbar{
+  display: none;
+}
