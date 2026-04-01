@@ -14,6 +14,8 @@ const inputSec = () => {
     setdetails(value);
   }
 
+  const [note, setnote] = useState([]);
+  
   function submitHandler(elem) {
     elem.preventDefault();
     const prevNote = [...note];
@@ -25,7 +27,6 @@ const inputSec = () => {
   
   }
 
-  const [note, setnote] = useState([]);
 
   function deleteNote(target) {
     const notes = [...note];
@@ -50,7 +51,7 @@ const inputSec = () => {
                   getDetails(detailselem.target.value);
                 }}/>
 
-                <button className='bg-black/40 backdrop-blur-md border border-black/20 text-white px-4 py-1 rounded-2xl shadow-lg hover:bg-black/70 active:scale-95'>Add Note</button>
+                <button className='bg-black/40 backdrop-blur-md border border-black/20 text-white px-4 py-1 rounded-2xl shadow-lg hover:bg-black/70 active:scale-95 outline-none'>Add Note</button>
             </form>
 
 
