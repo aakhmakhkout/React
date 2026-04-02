@@ -11,7 +11,6 @@
 //* Timeout support
 //* Better config handling
 
-import React from 'react'
 import { useState } from 'react';
 
 const App = () => {
@@ -27,13 +26,10 @@ const App = () => {
     const userDetails = data.results;
     // console.log(userDetails);
     // localStorage.setItem("userdetails", JSON.stringify(userDetails[0]));
+    setuser(userDetails[0]);
     return userDetails[0];
   }
 
-  async function getUserDetails() {
-    const src = await getData();
-      setuser(src);
-  }
 
   return(
     <div className='container'>
@@ -53,11 +49,12 @@ const App = () => {
           </div>
         </div>
       <button onClick={()=>{
-        getUserDetails();
+        getData();
+        console.log(users);
         // console.log(users);
       }}>Get User Data</button>
-     </div>
     </div>
+    </div> 
     )
 
 }

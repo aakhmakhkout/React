@@ -5,10 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React
     </title>
-</head>
-<body>
+    <style>
     
-
-    <script type="module" src="./script.js"></script>
+    </style>
+</head>
+<body style="
+  margin: 0;
+  height: 100vh;
+  background: 
+    radial-gradient(
+      circle at 0% 20%,
+      rgba(0, 255, 255, 0.35) 0%,
+      rgba(0, 255, 255, 0.15) 25%,
+      rgba(0, 0, 0, 0) 55%
+    ),
+    linear-gradient(
+      to right,
+      #031313 0%,
+      #000000 40%,
+      #000000 100%
+    );
+  background-color: #000;
+;">
+    <div class="container" style=" position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;">
+        <div>
+            <h1 style="color:white">hello i am noumaan</h1>
+        </div>
+        <div style=" width: 50%; height: 50vh; position: relative;  overflow-x:hidden ">
+<spline-viewer url="https://prod.spline.design/9EkXWyyGFKywtq9a/scene.splinecode"></spline-viewer>    </div>
+    </div>
+    
+    <!-- <script type="module" src="./script.js"></script> -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.74/build/spline-viewer.js"></script>
 </body>
 </html>
