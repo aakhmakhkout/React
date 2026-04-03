@@ -1,4 +1,4 @@
-//* STATE: data that a component remembers and can change over time. State is like a variable with memory + power to update UI
+//* STATE: data that a component remembers and can change over time. State is like a variable with memory + power to update UI, the data persists during re-rendring, but resets on reload.
 
 
 //! Hooks: are special functions in React that let us use features like state and lifecycle inside function components.Hooks allow function components to have state and react to changes without reloading the page.
@@ -9,7 +9,7 @@
 
 //todo: hooks features/tools: useState, useEffect, useRef, useContext, useMemo, useCallback
 
-//? useState = lets a component store and update data whenever the data changes.
+//? useState = lets a component store and update data whenever the data changes. When this state changes, React automatically re-renders the component and updates the UI.
 //* react components are functions, evertime they run, everthing resets, means they don't remember values, that is why we use useState which stores the data outside the function and return on every render.
 
 //? useEffect = runs code after the component renders (handles api calls, timers, eventlisteners)
