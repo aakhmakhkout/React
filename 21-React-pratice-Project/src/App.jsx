@@ -3,7 +3,6 @@ import Navbar from "./components/navbar/navbar.jsx"
 import {Route, Routes, useNavigate} from "react-router-dom"
 import Home from "./pages/Home.jsx"
 import Users from "./pages/users.jsx"
-import Dashboard from "./pages/dashboard.jsx"
 import SignIn from "./pages/signin.jsx"
 import { CreateThemeContext } from './context/themeChangeContext.jsx'
 import { StepBack, StepForward } from 'lucide-react'
@@ -38,7 +37,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/users" element={<Users />}/>
-        <Route path="/dashboard" element={<Dashboard />}/>
         <Route path="/signin" element={<SignIn />}/>
       </Routes>
       </div>

@@ -35,3 +35,20 @@
     margin-top: 40px;
     border-radius: 20px;
 }
+
+.Dark-theme {
+    background-color: white;
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 5px black;
+}
+
+.Light-theme {
+    color:white;
+    background-color: rgb(32, 71, 94);
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 5px rgb(9, 38, 65);
+}

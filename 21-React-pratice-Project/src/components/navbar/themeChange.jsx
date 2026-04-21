@@ -2,10 +2,12 @@ import React, { useContext, useState } from 'react'
 import {Moon} from "lucide-react"
 import { Sun } from 'lucide-react';
 import { CreateThemeContext } from '../../context/themeChangeContext';
+import { CardTheme } from '../../context/cardTheme';
 
 
 
 const themeChange = () => {
+const {Ctheme, setCtheme} = useContext(CardTheme);
 const {theme, settheme} = useContext(CreateThemeContext);
 // const iconDisplay ={
 //     icon: <Moon size={35} strokeWidth={1.75} />
@@ -26,10 +28,12 @@ const changetheme = () => {
     if(theme === "Dark") {
         settheme("Light")
         seticon(iconObj.light)
+        setCtheme("Light-theme")
     }
     else {
         settheme("Dark")
         seticon(iconObj.dark)
+        setCtheme("Dark-theme")
     }
 }
 

@@ -5,6 +5,7 @@ import { CreateUserContext } from '../context/addusersContext.jsx'
 const signin = () => {
     
     const {users, setUsers} = useContext(CreateUserContext);
+    
 
     const [createUser, setCreateUser] = useState({})
 
@@ -46,7 +47,7 @@ const signin = () => {
 
             <input onChange={(elem) => {
                 trackInput(elem.target);
-            }} className='bg-white py-3 px-2 rounded-lg outline-0 capitalize' type="text" placeholder='Enter your name' name="name" id="namebox" required/>
+            }} className='bg-white py-3 px-2 rounded-lg outline-0 capitalize' type="text" placeholder='Enter your name' name="name" id="namebox" required maxLength={30}/>
 
 
             <input onChange={(elem) => {
@@ -55,12 +56,12 @@ const signin = () => {
 
             <input onChange={(elem) => {
                 trackInput(elem.target);
-            }} className='bg-white py-3 px-2 rounded-lg outline-0' type="text" placeholder='what is your role {Web developer, ui/ux developer etc}' name='role' required id="rolefield"/>
+            }} className='bg-white py-3 px-2 rounded-lg outline-0' type="text" placeholder='what is your role {Web developer, ui/ux developer etc}' name='role' capitalize required id="rolefield" maxLength={30}/>
 
 
             <textarea onChange={(elem) => {
                 trackInput(elem.target);
-            }}  name="bio" id="bio" placeholder='about me' className='resize-none bg-white py-3 px-2 rounded-lg outline-0 capitalize h-40' id="biofield" required>
+            }}  name="bio" id="bio" placeholder='about me' className='resize-none bg-white py-3 px-2 rounded-lg outline-0 ' id="biofield" required maxLength={50}> 
 
             </textarea>
 
